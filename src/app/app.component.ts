@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'wip-instances-generator';
+  title = 'Gerador de instâncias de WIP 2.0';
 }
