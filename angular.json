@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "wip-instances-generator:build:production"
+              "buildTarget": "wip-instances-generator:build:production"
             },
             "development": {
-              "browserTarget": "wip-instances-generator:build:development"
+              "buildTarget": "wip-instances-generator:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wip-instances-generator:build"
+            "buildTarget": "wip-instances-generator:build"
           }
         },
         "test": {
