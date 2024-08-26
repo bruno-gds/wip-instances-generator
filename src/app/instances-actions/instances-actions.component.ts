@@ -7,6 +7,8 @@ import {RxStompService} from "../service/stomp/rx-stomp.service";
 
 import {RegisterAction} from "../model/registerAction";
 
+import {environment} from "../../environments/environment";
+
 
 @Component({
   selector: 'app-instances-actions',
@@ -19,7 +21,7 @@ import {RegisterAction} from "../model/registerAction";
   styleUrl: './instances-actions.component.scss'
 })
 export class InstancesActionsComponent implements OnInit {
-  controlNumber = 900023;
+  controlNumber = environment.CONTROL_NUMBER;
   qrCode: string | undefined = undefined;
 
   constructor(private rxStompService: RxStompService) {
@@ -42,7 +44,7 @@ export class InstancesActionsComponent implements OnInit {
       }
 
       this.rxStompService.publish({
-        destination: '/wip/vip-register',
+        destination: environment.WEBSOCKET_DESTINATION,
         body: JSON.stringify(registerAction)
       });
       this.sendPing();
@@ -76,7 +78,7 @@ export class InstancesActionsComponent implements OnInit {
     console.log(`>>> ${action}`);
 
     this.rxStompService.publish({
-      destination: '/wip/vip-register',
+      destination: environment.WEBSOCKET_DESTINATION,
       body: JSON.stringify(registerAction)
     });
   }
