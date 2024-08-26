@@ -1,16 +1,5 @@
 <h1>{{ title }}</h1>
 
-<div class="butons">
-  <button (click)="info()">Info</button>
-  <button (click)="start()">Conectar</button>
-  <button (click)="stop()">Desativar</button>
-  <button (click)="start()">Ativar</button>
-  <button (click)="destroy()">Desconectar</button>
-</div>
-
-<div *ngIf="qrCode !== undefined">
-  <p>QR CODE:</p>
-  <qrcode [qrdata]="qrCode"></qrcode>
-</div>
+<app-instances-actions></app-instances-actions>
 
 <router-outlet></router-outlet>

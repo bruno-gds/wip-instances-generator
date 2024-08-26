@@ -1,8 +1,11 @@
 import { RxStompConfig } from '@stomp/rx-stomp';
 
+import {environment} from "../../../environments/environment";
+
+
 export const myRxStompConfig: RxStompConfig = {
   // Which server?
-  brokerURL: "wss://wip-development-b0945ea39d0c.herokuapp.com/stomp-endpoint",
+  brokerURL: environment.WEBSOCKET_STOMP,
 
   // Headers
   // Typical keys: login, passcode, host

@@ -1,0 +1,12 @@
+<div class="butons">
+  <button (click)="executeActions('INFO')">Info</button>
+  <button (click)="executeActions('START')">Conectar</button>
+  <button (click)="executeActions('STOP')">Desativar</button>
+  <button (click)="executeActions('START')">Ativar</button>
+  <button (click)="executeActions('DESTROY')">Desconectar</button>
+</div>
+
+<div *ngIf="qrCode !== undefined">
+  <p>QR CODE:</p>
+  <qrcode [qrdata]="qrCode"></qrcode>
+</div>
