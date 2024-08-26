@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import {rxStompServiceFactory} from "./service/stomp/rx-stomp-service-factory";
 import {RxStompService} from "./service/stomp/rx-stomp.service";
+import {QRCodeModule} from "angularx-qrcode";
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {RxStompService} from "./service/stomp/rx-stomp.service";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    QRCodeModule
   ],
   providers: [
     { provide: RxStompService, useFactory: rxStompServiceFactory }

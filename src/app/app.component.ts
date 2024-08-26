@@ -11,7 +11,7 @@ import {RegisterAction} from "./model/registerAction";
 })
 export class AppComponent implements OnInit {
   title = 'Gerador de instâncias de WIP 2.0';
-  controlNumber = 900024;
+  controlNumber = 900023;
   qrCode: string | undefined = undefined;
 
   constructor(private rxStompService: RxStompService) {
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
         console.log("<<< INFO: ", event.company);
         break;
       case 'QR_CODE':
-        console.log("<<< QR_CODE: ", event.qrCode);
+        console.log("<<< QR_CODE: ", event);
         this.qrCode = event.qrCode;
         break;
       case 'ERROR':

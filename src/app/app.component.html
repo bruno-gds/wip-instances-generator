@@ -9,7 +9,8 @@
 </div>
 
 <div *ngIf="qrCode !== undefined">
-  <p>QR CODE: {{ qrCode }}</p>
+  <p>QR CODE:</p>
+  <qrcode [qrdata]="qrCode"></qrcode>
 </div>
 
 <router-outlet></router-outlet>
